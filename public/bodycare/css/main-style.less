@@ -1,0 +1,275 @@
+body{
+	font-size: 14px;
+}
+@lat:#ededed;
+@cyan:#1cb4ff;
+//setup
+.setup-a{
+	text-decoration: none;
+}
+//ct-silde
+.col-ct-8{
+	//desktop
+	@media screen and (min-width:980px) {
+		padding-right: 5px;
+	}
+	.bx-wrapper{
+		border:0px;
+		margin:0px;
+		-webkit-box-shadow:none;
+		box-shadow: none;
+	}
+	.bx-pager{
+		padding-top: 0px;
+		bottom:10px;
+	}
+}
+.col-ct-4{
+	@media screen and (min-width:980px) {
+		
+	}
+}
+.col-ct-4{
+	@media screen and (min-width:768px){
+		
+	}
+}
+//------------css
+.brtom{border-bottom: 1px solid @lat;};
+.brleft{border-left: 1px solid @lat;}
+.menu-top{
+	padding: 10px 0px;
+	.brtom();
+	.sitename{
+		font-size: 19px;
+		font-weight: 600;
+		color: @cyan;
+		float: left;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		letter-spacing: 10px;
+	}
+	.menu-item >.item{
+		display: inline;
+		padding: 0px 15px;
+		border-left: 1px solid @lat;
+		&-1,&-2,&-3{
+		color:@cyan;
+		}
+	}
+	.dk{
+		padding:10px;
+		background-color: @cyan;
+		border-radius: 17px;
+		a{
+			.setup-a();
+			font-weight: 500;
+			font-size: 15px;
+			color: @lat;
+			&:hover{
+				color: #fff;
+			}
+		}
+	}
+}
+
+//---menu-navigation
+.nav-menu{
+	background-color: @cyan;
+	ul.nav-ul{
+		display: block;
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+		line-height: 40px;
+		>li{
+			float: left;
+			>a{
+				padding: 12px 30px 12px 15px;
+				margin-left: 0px;
+				color: @lat;
+				.brleft();
+				font-size: 14px;
+				font-weight: 500;
+				text-transform: uppercase;
+				text-decoration: none;
+				&:hover{
+					background-color: @lat;
+					color: @cyan;
+				}
+			}
+			&.item-1 a{
+				background-color: @lat;
+				color: @cyan;
+			}
+		}
+	}
+	.ct-form{
+		position: relative;
+	}
+	input[type=text]{
+		padding-right: 40px;
+	}
+	.ct-button{
+		position: absolute;
+		right: 260px;
+		top: 5px;
+		padding-left: 12px;
+		color:@cyan;
+		border:none;
+	}
+}
+.banner{
+	display: block;
+	padding-top:5px;
+	.col-ct-8{
+		//padding-left: 0px;
+	}
+}
+//------product
+.prods{
+	.col-ct-12{
+		margin:10px 0px;
+	}
+	@media screen and (min-width:980px){
+		.col-ct-2{
+			width: 20%;
+			padding-bottom: 15px;
+		}
+	}
+	@media screen and (min-width:768px){
+		.col-ct-2{
+			margin-bottom: 5px;
+			width: 25% !important;
+			margin-top: 10px;
+		}
+	}
+	.ct-h2{
+		font-size: 19px;
+		margin-top: 0px;
+		margin-bottom: 15px;
+		padding-right: 15px;
+		padding-top: 10px;
+		padding-left: 0px;
+		position: relative;
+		&:before{
+			border-top: 1px solid #ededed;
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0px;
+			right: 0px;
+		}
+		a{
+			.setup-a();
+			position: absolute;
+			top: 0px;
+			background: #fff;
+			padding-right: 10px;
+		}
+	}
+	hr{
+		color: $lat;
+	}
+	.prod-br{
+		border:1px solid @lat;
+		&:hover{
+			border: 1px solid @cyan;
+		}
+		.ct-h3{
+			font-size: 0px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			display: block;
+			padding: 5px;
+			a{
+				.setup-a();
+				font-size: 17px;
+				line-height: 21px;
+				font-weight: 500;
+			}
+		}
+		.description{
+			padding: 5px 0px;
+			font-size: 12px;
+			font-style: italic;
+			padding-left: 1px;
+			padding-right: 1px;
+		}
+		.prices{
+			color: #ff0000;
+			font-weight: 700;
+			padding-left: 1px;
+		}
+		.thumbnail{
+			margin-bottom: 0px;
+			border: none;
+		}
+	}
+}
+//-----news
+.news{
+
+	.col-ct-12{
+		@media screen and (min-width:768px){
+			.ct-h2{
+				margin-bottom: 0px;
+				padding-top: 0px;
+				padding-left: 0px;
+				margin-bottom: 0px;
+			}
+		}
+		.prods> .col-ct-12;
+		.ct-h2{
+			.prods> .ct-h2;
+		}
+	}
+	.col-ct-4{
+		@media screen and (min-width:768px){
+			.news-br{
+			
+			}
+		}
+	}
+	.news-br{
+		.prods>.prod-br;
+		.ct-h3{
+			.prods> .prod-br> .ct-h3;
+		}
+		.des{
+			padding:5px;
+		}
+	}
+	.thumbnail{
+		margin-bottom: 0px;
+		border: none;
+		span{
+			font-size: 15px;
+			font-weight: 500;
+		}
+	}
+	p{
+		margin:0px;
+	}
+}
+//---footer
+footer{
+	.footer-br{
+		display: block;
+		padding: 10px;
+		background-color: @cyan;
+		margin-top: 5px;
+	}
+	.copy{
+		font-size: 15px;
+		font-weight: 500;
+		color: #fff;
+		a{
+			color: #fff;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+
+}
